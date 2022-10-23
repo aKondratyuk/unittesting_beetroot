@@ -42,3 +42,22 @@ def get_daily_movies():
     print('Retrieving the movie set to play on today\'s flight...')
     return ['Parasite', 'Nomadland', 'Roma', 'Black Widow', 'Spiral']
 
+
+# Означає, що зараз у нас регулярний літак (звичайний без media onboarding systems)
+def regional_jet():
+    return True
+
+
+class FormError(Exception):
+    pass
+
+
+def issue_survey():
+    print('Opening customer survey')
+    raise FormError('An error occurred when opening customer survey form!')
+
+
+def log_customer_complaint():
+    print('Opening customer complaint form')
+    print('Logged customer complaint')
+    return 'Success'
